@@ -1,0 +1,26 @@
+<header>
+	<section id="header-top" *ngFor="let site of sites">
+		<div class="wrap">
+				<div class="email" *ngIf="site.email"><a href="mailto:{{site.email}}">{{site.email}}</a></div>
+				<div class="phone" *ngIf="site.phone"><a href="tel:{{site.phone}}">{{site.phone}}</a></div>
+			<div class="clear"></div>
+		</div>
+	</section>
+
+	<div class="wrap header-wrap" *ngFor="let site of sites">
+		<div class="mobile-menu">Menu</div>
+	    <nav id="nav-main-menu" class="menu-main-menu-container" *ngIf="site.menus">
+	        <ul id="main-menu" class="hide">
+	            <li *ngFor="let menu of site.menus" id="menu-item-{{menu.id}}" class="menu-item menu-item-{{menu.id}}"><a routerLink="{{menu.url}}">{{menu.title}}</a></li>
+	        </ul>
+	    </nav>
+
+		<figure class="main-logo" *ngIf="site.logo">
+			<a href="/">
+				<img src="{{site.logo}}" alt="{{site.name}}" />
+			</a>
+		</figure>
+
+		<div class="clear"></div>
+	</div>
+</header>

@@ -1,0 +1,92 @@
+
+<section id="banner" *ngFor="let slogan of sites">
+	<div class="wrap">
+		<div class="banner-text" *ngIf="slogan.slogan1 || slogan.slogan2">
+            <h2 *ngIf="slogan.slogan1">{{slogan.slogan1}}</h2>
+            <h3 *ngIf="slogan.slogan2">{{slogan.slogan2}}</h3>
+        </div>
+
+		<div class="banner-form">
+			<div role="form" class="wpcf7" id="wpcf7-f37-p2-o2" lang="en-US" dir="ltr">
+				<div class="screen-reader-response"></div>
+				<form action="/wp_painters_submitted/?now=2017-05-13-03%3A47%3A10#wpcf7-f37-p2-o2" method="post" class="wpcf7-form" novalidate="novalidate">
+					<h2 class="form-title">Get A Free Estimate</h2>
+					<div class="input-field">
+						<span class="wpcf7-form-control-wrap fullname"><input type="text" name="fullname" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Full Name"></span>
+					</div>
+					<div class="input-field">
+						<span class="wpcf7-form-control-wrap emailaddress"><input type="email" name="emailaddress" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email Address"></span>
+					</div>
+					<div class="input-field">
+						<span class="wpcf7-form-control-wrap phonenumber"><input type="text" name="phonenumber" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone Number"></span>
+					</div>
+					<div class="textarea-field">
+						<span class="wpcf7-form-control-wrap message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea></span>
+					</div>
+					<div class="btn-submit"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
+					<div class="wpcf7-response-output wpcf7-display-none"></div>
+				</form>
+			</div>
+        </div>
+
+		<div class="clear"></div>
+	</div>
+	<div class="banner-overlay"></div>
+	<video poster="/assets/video/video.jpg" id="bgvid" playsinline autoplay muted loop>
+	  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+	<source src="/assets/video/video.mp4" type="video/mp4">
+	</video>
+</section>
+
+<main>
+	<div class="wrap">
+		<div class="home-content">
+			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents">
+				<h2 class="content-title">{{homeContent.title}}</h2>
+				<p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</strong></p>
+				<p>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam.</p>
+			</article>
+		</div>
+		<div class="clear"></div>
+	</div>
+</main>
+
+<section id="services">
+	<div class="wrap">
+		<div class="boxes">
+			<div class="box box-white box-1">
+				<figure class="box-img"><img src="/assets/images/img-1.jpg" class="" alt=""></figure>
+				<div class="box-text">
+					<h2 class="box-title">Exterior Painting</h2>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se...					
+					<div class="read-more"><a href=""><img src="/assets/images/icon-arrow.png" alt=""></a></div>
+				</div>
+			</div>
+
+			<div class="box box-white box-2">
+				<figure class="box-img"><img src="/assets/images/img-2.jpg" class="" alt=""></figure>
+				<div class="box-text">
+					<h2 class="box-title">Interior Painting</h2>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se...					
+					<div class="read-more"><a href=""><img src="/assets/images/icon-arrow.png" alt=""></a></div>
+				</div>
+			</div>
+
+			<div class="box box-3">
+				<h2 class="box-title-big">More Services</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+				<ul>
+				<li>Ut wisi enim ad minim veniam</li>
+				<li>Quis nostrud exerci tation</li>
+				<li>Ullamcorper suscipit lobortis</li>
+				<li>Nisl ut aliquip ex ea commodo</li>
+				<li>Consequat duis autem vel eum</li>
+				</ul>
+				<div class="btn-call-action"><a href="">Contact Us Now!</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>

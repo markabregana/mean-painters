@@ -1,0 +1,40 @@
+<section id="sub-footer" *ngFor="let site of sites">
+	<div class="wrap">
+		<div class="sub-footer-wrap">
+			<div class="sub-footer-widget widget-nav">
+				<h2 class="sub-footer-title">Navigation</h2>
+                <ul id="sub-footer-menu" class="footer-menu">
+                    <li *ngFor="let menu of site.menus" id="menu-item-{{menu.id}}" class="menu-item menu-item-{{menu.id}}"><a routerLink="{{menu.url}}">{{menu.title}}</a></li>
+                </ul>
+			</div>
+
+			<div class="sub-footer-widget widget-contacts" *ngIf="site.address || site.phone || site.email">
+				<h2 class="sub-footer-title">Get In Touch</h2>
+				<div class="address" *ngIf="site.address">{{site.address.street}}, <br>
+                    {{site.address.city}}, {{site.address.suburb}} {{site.address.postcode}}, {{site.address.state}}</div>
+				<div class="phone" *ngIf="site.phone">
+					<a href="tel:{{site.phone}}">{{site.phone}}</a>
+				</div>
+				<div class="email" *ngIf="site.email">
+                    <a href="mailto:{{site.email}}">{{site.email}}</a>
+                </div>
+			</div>
+
+			<div class="sub-footer-widget widget-social-media">
+                <h2 class="widgettitle">Follow Us</h2>
+                <div class="sns">
+                    <a href="{{site.socialMedia.facebook}}" target="_blank"><img src="/assets/images/icon-fb.png" alt="" /></a>
+                    <a href="{{site.socialMedia.twitter}}" target="_blank"><img src="/assets/images/icon-tw.png" alt="" /></a>
+                    <a href="{{site.socialMedia.googleplus}}" target="_blank"><img src="/assets/images/icon-gp.png" alt="" /></a>
+                </div>
+			</div>
+		</div><!--sub-footer-wrap-->
+		<div class="clear"></div>
+	</div>
+</section>
+
+<footer *ngFor="let site of sites">
+	<div class="wrap">
+		<strong>{{site.name}}</strong> © 2017
+	</div>
+</footer>

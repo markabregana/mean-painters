@@ -1,0 +1,81 @@
+/* nav */
+nav{
+	float: right;
+	
+	@include respond-to-width($tab-size){
+		float: none;
+	}
+}
+#main-menu{
+	list-style: none;
+	margin: 0;
+	
+	display: flex;
+	justify-content: space-around;
+	
+	li{
+		
+		a{
+			color: $fifth-theme-color;
+			display: block;
+			padding: 50px 13px;
+			font-size: 20px;
+			line-height: 26px;
+			text-decoration: none;
+			
+			@include transition(background-color 0.3s);
+			
+			@include respond-to-width($tab-size){
+				padding: 15px 5%;
+				width: 90%;
+				color: $first-theme-color;
+			}
+		}
+		
+		&.current_page_item a, &:hover a{
+			background: $fourth-theme-color;
+			color: $first-theme-color;
+		}
+	}
+	
+	@include respond-to-width($tab-size){
+		display: block;
+		background: $fourth-theme-color * 0.9;
+		&.hide{ display: none; }
+		&.show{ display: block; }
+	}
+}
+
+.mobile-menu{
+	display: none;
+	background: url(../images/menu-mobile.png) no-repeat 10px center $fourth-theme-color * 1.2;
+	padding: 15px 0;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: $first-theme-color;
+	@include transition(background-color 0.3s);
+	
+	&:hover{
+		background-color: $fourth-theme-color * 1.1;
+	}
+	
+	@include respond-to-width($tab-size){
+		display: block;
+	}
+}
+
+#sub-footer-menu{
+	list-style: none;
+	margin: 0 0 0 10px;
+	
+	li{
+		background:url(../images/arrow-bullet.png) no-repeat 0 9px transparent;
+		padding: 0 0 5px 15px;
+		
+		a{
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+}
