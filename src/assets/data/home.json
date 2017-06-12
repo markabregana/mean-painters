@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "WELCOME TO PAINTERS",
+        "content": "content-left",
+        "url": "",
+        "class": "left-content"
+    },
+    {
+        "id": 2,
+        "title": "WHY CHOOSE US",
+        "content": "content-right",
+        "url": "",
+        "class": "right-content"
+    }
+]

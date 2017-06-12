@@ -1,0 +1,170 @@
+/* blocks */
+.home-content{
+	display: flex;
+	justify-content: space-between;
+	
+	article, aside{
+		margin-bottom: 30px;
+	}
+	article{
+		flex: 3;
+		margin-right: 4%;
+	}
+	aside{
+		flex: 2;
+	}
+	
+	@include respond-to-width($tab-size){
+		display: block;
+		article, aside{
+			margin: 0 0 30px;
+		}
+	}
+}
+.content-title{
+	color: $fifth-theme-color;
+	font-size: 40px;
+	line-height: 46px;
+	margin: 0 0 35px;
+	text-transform: uppercase;
+	
+	span, b, strong{
+		color: $fourth-theme-color;
+	}
+}
+.form-title{
+	font-family: $font-header;
+	font-size: 40px;
+	line-height: 46px;
+	margin: 0 0 28px;
+	color: $first-theme-color;
+	
+	@include respond-to-width($tab-size){
+		text-align: center;
+	}
+}
+
+.content-wrap, .contact-wrap{
+	display: flex;
+	justify-content:space-between;
+	
+	@include respond-to-width($big-tab-size){
+		display: block;
+	}
+	
+	.content-left{
+		flex: 6;
+		margin-right: 4%;
+		
+		@include respond-to-width($big-tab-size){
+			margin: 0 0 30px;
+		}
+	}
+	.content-right{
+		flex: 3;
+		margin: 0 0 30px;
+	}
+}
+
+.archive-wrap{
+	display: flex;
+	justify-content:space-between;
+	
+	@include respond-to-width($big-tab-size){
+		display: block;
+	}
+	.content-left{
+		flex: 6;
+		margin-right: 4%;
+		
+		@include respond-to-width($big-tab-size){
+			margin: 0 0 30px;
+		}
+	}
+	.content-right{
+		flex: 2;
+		margin: 0 0 30px;
+	}
+}
+
+#page-title{
+	background: $fourth-theme-color * 0.9;
+	font-size: 40px;
+	line-height: 44px;
+	color: $first-theme-color;
+	padding: 3% 0;
+	@include respond-to-width($big-tab-size){
+		padding: 30px 0;
+	}
+}
+
+.content-entry{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0 30px;
+	margin: 0 0 30px;
+	border-bottom: 1px solid #eee;
+	
+	&:last-child{ 
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+	
+	@include respond-to-width($phone-size){
+		display: block;
+	}
+	
+	figure{
+		flex: 3;
+		margin: 0 20px 20px 0;
+	}
+	article{
+		flex: 4;
+	}
+	
+}
+.archive-entry{
+	@extend .content-entry;
+	figure{
+		flex: 3;
+		margin: 0 20px 20px 0;
+	}
+	article{
+		flex: 4;
+	}
+}
+
+.content-entry-title{
+	a{
+		@extend .box-title;
+		text-decoration: none;
+		@include transition(color 0.3s);
+		
+		&:hover{ color: $fourth-theme-color; }
+	}
+}
+
+.widget-archive{
+	padding: 0 0 20px;
+	a{
+		text-decoration: none;
+		@include transition(color 0.3s);
+		&:hover{
+			color: $fifth-theme-color;
+		}
+	}
+	ul{
+		margin: 0 0 20px 30px;
+	}
+}
+.widgettitle{
+	@extend .box-title;
+	margin: 0 0 10px;
+}
+
+.contact-form{
+	padding: 30px 5%;
+	background: $fourth-theme-color;
+	@include border-radius(10px);
+}
