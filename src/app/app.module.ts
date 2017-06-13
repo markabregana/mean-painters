@@ -1,4 +1,4 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
@@ -6,26 +6,27 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
 // import index html
-import { AppComponent }  from './app.component';
+import { AppComponent } from './app.component';
 // import header html
-import { AppHeader } from './components/app.header';
+import { AppHeaderComponent } from './components/app.header';
 // import footer html
-import { AppFooter } from './components/app.footer';
+import { AppFooterComponent } from './components/app.footer';
 // import home html
-import { AppHome } from './components/app.home';
+import { AppHomeComponent } from './components/app.home';
 // import About Us html
-import { AppAboutUs } from './components/app.aboutus';
+import { AppAboutUsComponent } from './components/app.aboutus';
 // import Services html
-import { AppServices } from './components/app.services';
+import { AppServicesComponent } from './components/app.services';
 // import About Us html
-import { AppGallery } from './components/app.gallery';
+import { AppGalleryComponent } from './components/app.gallery';
 // import Contact Us html
-import { AppContactUs } from './components/app.contactus';
+import { AppContactUsComponent } from './components/app.contactus';
 
 
 @NgModule({
   imports:      [ BrowserModule, HttpModule, routing ],
-  declarations: [ AppComponent, AppHeader, AppFooter, AppHome, AppAboutUs, AppServices, AppGallery, AppContactUs ],
+  // tslint:disable-next-line:max-line-length
+  declarations: [ AppComponent, AppHeaderComponent, AppFooterComponent, AppHomeComponent, AppAboutUsComponent, AppServicesComponent, AppGalleryComponent, AppContactUsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

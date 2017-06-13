@@ -7,31 +7,31 @@ import { SiteService } from '../services/site.service';
 // set header view
 @Component({
     moduleId: module.id,
-    selector: 'main-template',
+    selector: 'app-main-template',
     templateUrl: '../../assets/templates/app.home.html',
     providers: [SiteService]
 })
-export class AppHome  {
+export class AppHomeComponent  {
     sites: Sites[];
     homeContents: HomeContents[];
-    constructor(private siteService: SiteService){
+    constructor(private siteService: SiteService) {
         this.siteService.getHeader().subscribe(sites => {
             this.sites = sites;
         });
         this.siteService.getHome().subscribe(home => {
             this.homeContents = home;
-        })
+        });
     }
 }
 
-interface Sites{
+interface Sites {
     slogan1: string;
     slogan2: string;
 }
-interface HomeContents{
+interface HomeContents {
     content1: Content[];
 }
-interface Content{
+interface Content {
     id: number;
     title: string;
     content: string;

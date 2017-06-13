@@ -6,11 +6,11 @@ import { SiteService } from '../services/site.service';
 // set header view
 @Component({
     moduleId: module.id,
-    selector: 'main-template',
+    selector: 'app-main-template',
     templateUrl: '../../assets/templates/app.contactus.html',
     providers: [SiteService]
 })
-export class AppContactUs {
+export class AppContactUsComponent {
     sites: Sites[];
     constructor(private headerService: SiteService) {
         this.headerService.getHeader().subscribe(sites => {
