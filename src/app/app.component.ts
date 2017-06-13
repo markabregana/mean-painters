@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-main',
   template: `
-    <header-template></header-template>
+    <app-header-template></app-header-template>
     <router-outlet></router-outlet>
-    <footer-template></footer-template>
+    <app-footer-template></app-footer-template>
   `,
 })
-export class AppComponent  {
-
-}
+export class AppComponent  { }

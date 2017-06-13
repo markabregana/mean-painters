@@ -7,20 +7,20 @@ import { SiteService } from '../services/site.service';
 // set header view
 @Component({
     moduleId: module.id,
-    selector: 'footer-template',
+    selector: 'app-footer-template',
     templateUrl: '../../assets/templates/app.footer.html',
     providers: [SiteService]
 })
-export class AppFooter  {
+export class AppFooterComponent  {
     sites: Sites[];
-    constructor(private headerService: SiteService){
+    constructor(private headerService: SiteService) {
         this.headerService.getHeader().subscribe(sites => {
             this.sites = sites;
         });
     }
 }
 
-interface Sites{
+interface Sites {
     name: string;
     email: string;
     phone: string;
@@ -28,19 +28,19 @@ interface Sites{
     menus: Menus[];
     socialMedia: SocialMedia[];
 }
-interface Address{
+interface Address {
     street: string;
     city: string;
     suburb: string;
     postcode: string;
-    state: string
+    state: string;
 }
-interface Menus{
+interface Menus {
     id: number;
     url: string;
     title: string;
 }
-interface SocialMedia{
+interface SocialMedia {
     facebook: string;
     twitter: string;
     googleplus: string;

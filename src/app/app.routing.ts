@@ -1,32 +1,32 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import { AppHome } from './components/app.home';
-import { AppAboutUs } from './components/app.aboutus';
-import { AppServices } from './components/app.services';
-import { AppGallery } from './components/app.gallery';
-import { AppContactUs } from './components/app.contactus';
+import { AppHomeComponent } from './components/app.home';
+import { AppAboutUsComponent } from './components/app.aboutus';
+import { AppServicesComponent } from './components/app.services';
+import { AppGalleryComponent } from './components/app.gallery';
+import { AppContactUsComponent } from './components/app.contactus';
 
 const appRoutes: Routes = [
     {
         path: '',
-        component: AppHome
+        component: AppHomeComponent
     },
     {
         path: 'about-us',
-        component: AppAboutUs
+        component: AppAboutUsComponent
     },
     {
         path: 'services',
-        component: AppServices
+        component: AppServicesComponent
     },
     {
         path: 'gallery',
-        component: AppGallery
+        component: AppGalleryComponent
     },
     {
         path: 'contact-us',
-        component: AppContactUs
+        component: AppContactUsComponent
     }
 ];
 
