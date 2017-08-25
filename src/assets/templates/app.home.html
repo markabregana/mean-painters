@@ -53,21 +53,12 @@
 <section id="services">
 	<div class="wrap">
 		<div class="boxes">
-			<div class="box box-white box-1">
-				<figure class="box-img"><img src="/assets/images/img-1.jpg" class="" alt=""></figure>
+			<div class="box box-white box-{{service.id}}" *ngFor="let service of servicesContent">
+				<figure class="box-img"><img src="{{service.featuredImage}}" class="" alt="{{service.title}}"></figure>
 				<div class="box-text">
-					<h2 class="box-title">Exterior Painting</h2>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se...					
-					<div class="read-more"><a href=""><img src="/assets/images/icon-arrow.png" alt=""></a></div>
-				</div>
-			</div>
-
-			<div class="box box-white box-2">
-				<figure class="box-img"><img src="/assets/images/img-2.jpg" class="" alt=""></figure>
-				<div class="box-text">
-					<h2 class="box-title">Interior Painting</h2>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se...					
-					<div class="read-more"><a href=""><img src="/assets/images/icon-arrow.png" alt=""></a></div>
+					<h2 class="box-title">{{service.title}}</h2>
+					<div [innerHTML]="service.content"></div>			
+					<div class="read-more"><a href="{{service.url}}"><img src="/assets/images/icon-arrow.png" alt=""></a></div>
 				</div>
 			</div>
 

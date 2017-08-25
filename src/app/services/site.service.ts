@@ -5,17 +5,21 @@ import 'rxjs/add/operator/map';
 
 // get site json from view/data/
 @Injectable()
-export class SiteService{
-    constructor(private http: Http){
+export class SiteService {
+    constructor(private http: Http) {
         //console.log(this.getHeader().subscribe());
     }
 
-    getHeader(){
+    getHeader() {
         return this.http.get('/assets/data/site.json')
             .map(res => res.json());
     }
-    getHome(){
+    getHome() {
         return this.http.get('/assets/data/home.json')
+            .map(res => res.json());
+    }
+    getServices() {
+        return this.http.get('/assets/data/services.json')
             .map(res => res.json());
     }
 }
