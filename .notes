@@ -1,0 +1,55 @@
+Home
+    - Header
+        - Top
+            - Email Address
+            - Phone Number
+        - Main
+            - Logo
+            - Menu
+    - Banner
+        - Slogan
+        - Form
+        - Video
+    - Content Section 1
+        - Column 1
+        - Column 2
+    - Services Section
+        - 2 Box Services
+        - 3rd Box More Services
+    - Sub Footer
+        - Navigation Block
+        - Get in touch Block
+        - Follow Us Block
+    - Footer
+        - Company Name
+        - Current Year
+
+About Us
+    - Title Block
+    - Left Block
+    - Right Block
+
+Services
+    - Title Block
+    - Left Block
+        - Services List
+            - Image
+            - Title
+            - Excerpt
+    - Right Block
+        - Services Title List
+
+Gallery
+    - Title Block
+    - Content Block
+    - Gallery Images
+        - Title
+        - Images
+
+Contact Us
+    - Title Block
+    - Left Block
+        - Content
+        - Google Map
+    - Right Block
+        - Contact Form
