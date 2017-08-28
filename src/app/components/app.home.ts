@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import {Http} from '@angular/http';
+import { Http } from '@angular/http';
+import { Pipe, PipeTransform } from '@angular/core';
+import { FilterPipe } from '../filter.pipe';
+
 
 // get site json
 import { SiteService } from '../services/site.service';
@@ -24,7 +27,7 @@ export class AppHomeComponent  {
         });
         this.siteService.getServices().subscribe(services => {
             this.servicesContent = services;
-        })
+        });
     }
 }
 

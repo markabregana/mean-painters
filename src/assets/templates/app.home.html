@@ -41,7 +41,11 @@
 <main>
 	<div class="wrap">
 		<div class="home-content">
-			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents">
+			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:1">
+				<h2 class="content-title">{{homeContent.title}}</h2>
+				<div [innerHTML]="homeContent.content"></div>
+			</article>
+			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:2">
 				<h2 class="content-title">{{homeContent.title}}</h2>
 				<div [innerHTML]="homeContent.content"></div>
 			</article>
@@ -62,17 +66,10 @@
 				</div>
 			</div>
 
-			<div class="box box-3">
-				<h2 class="box-title-big">More Services</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
-				<ul>
-				<li>Ut wisi enim ad minim veniam</li>
-				<li>Quis nostrud exerci tation</li>
-				<li>Ullamcorper suscipit lobortis</li>
-				<li>Nisl ut aliquip ex ea commodo</li>
-				<li>Consequat duis autem vel eum</li>
-				</ul>
-				<div class="btn-call-action"><a href="">Contact Us Now!</a></div>
+			<div class="box box-3" *ngFor="let homeContent of homeContents | filter:3">
+				<h2 class="box-title-big">{{homeContent.title}}</h2>
+				<div [innerHTML]="homeContent.content"></div>
+				<div class="btn-call-action"><a href="{{homeContent.url}}">Contact Us Now!</a></div>
 			</div>
 			<div class="clear"></div>
 		</div>

@@ -14,5 +14,13 @@
         "url": "",
         "class": "right-content",
         "featuredImage": ""
+    },
+    {
+        "id": 3,
+        "title": "More Services",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.<\/p><ul><li>Ut wisi enim ad minim veniam<\/li><li>Quis nostrud exerci tation<\/li><li>Ullamcorper suscipit lobortis<\/li><li>Nisl ut aliquip ex ea commodo<\/li><li>Consequat duis autem vel eum<\/li><\/ul>",
+        "url": "/contact-us",
+        "class": "",
+        "featuredImage": ""
     }
 ]
