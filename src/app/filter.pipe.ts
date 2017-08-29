@@ -5,9 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(items: any, value: any): any[] {
+  transform(items: any, term: any, value: any): any[] {
     if (!items) { return []; }
-    return items.filter(it => it.location === value);
+    console.log(term + ' - ' + value);
+    return items.filter(it => it[term] === value);
   }
 
 }

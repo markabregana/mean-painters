@@ -19,6 +19,7 @@ import { AppHomeComponent } from './components/app.home';
 import { AppAboutUsComponent } from './components/app.aboutus';
 // import Services html
 import { AppServicesComponent } from './components/app.services';
+import { AppSingleServiceComponent } from './components/app.single.service';
 // import About Us html
 import { AppGalleryComponent } from './components/app.gallery';
 // import Contact Us html
@@ -28,7 +29,7 @@ import { AppContactUsComponent } from './components/app.contactus';
 @NgModule({
   imports:      [ BrowserModule, HttpModule, routing ],
   // tslint:disable-next-line:max-line-length
-  declarations: [ AppComponent, AppHeaderComponent, AppFooterComponent, AppHomeComponent, AppAboutUsComponent, AppServicesComponent, AppGalleryComponent, AppContactUsComponent, FilterPipe ],
+  declarations: [ AppComponent, AppHeaderComponent, AppFooterComponent, AppHomeComponent, AppAboutUsComponent, AppServicesComponent, AppGalleryComponent, AppContactUsComponent, FilterPipe, AppSingleServiceComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

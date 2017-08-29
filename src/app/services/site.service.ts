@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class SiteService {
     constructor(private http: Http) {
-        //console.log(this.getHeader().subscribe());
+        // console.log(this.getHeader().subscribe());
     }
 
     getHeader() {
