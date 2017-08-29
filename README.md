@@ -6,7 +6,7 @@
 - AngularJS
 - NodeJS
 
-____
+__
 
 ### Branches
 1. Master
@@ -14,4 +14,4 @@ ____
 2. [Next](https://github.com/markabregana/mean-painters/tree/next)
     - Staging/Development branch
 3. MP-
-    - Branches that are categories by functionality
+    - Branches that are categories by functionality/task
