@@ -1,6 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Pipe } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+
+import { FilterPipe } from './filter.pipe';
 
 // import routing
 import { routing } from './app.routing';
@@ -26,7 +28,7 @@ import { AppContactUsComponent } from './components/app.contactus';
 @NgModule({
   imports:      [ BrowserModule, HttpModule, routing ],
   // tslint:disable-next-line:max-line-length
-  declarations: [ AppComponent, AppHeaderComponent, AppFooterComponent, AppHomeComponent, AppAboutUsComponent, AppServicesComponent, AppGalleryComponent, AppContactUsComponent ],
+  declarations: [ AppComponent, AppHeaderComponent, AppFooterComponent, AppHomeComponent, AppAboutUsComponent, AppServicesComponent, AppGalleryComponent, AppContactUsComponent, FilterPipe ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

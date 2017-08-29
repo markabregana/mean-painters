@@ -41,7 +41,11 @@
 <main>
 	<div class="wrap">
 		<div class="home-content">
-			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents">
+			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:'home-section-1' ">
+				<h2 class="content-title">{{homeContent.title}}</h2>
+				<div [innerHTML]="homeContent.content"></div>
+			</article>
+			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:'home-section-2' ">
 				<h2 class="content-title">{{homeContent.title}}</h2>
 				<div [innerHTML]="homeContent.content"></div>
 			</article>
@@ -53,35 +57,19 @@
 <section id="services">
 	<div class="wrap">
 		<div class="boxes">
-			<div class="box box-white box-1">
-				<figure class="box-img"><img src="/assets/images/img-1.jpg" class="" alt=""></figure>
+			<div class="box box-white box-{{service.id}}" *ngFor="let service of servicesContent">
+				<figure class="box-img"><img src="{{service.featuredImage}}" class="" alt="{{service.title}}"></figure>
 				<div class="box-text">
-					<h2 class="box-title">Exterior Painting</h2>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se...					
-					<div class="read-more"><a href=""><img src="/assets/images/icon-arrow.png" alt=""></a></div>
+					<h2 class="box-title">{{service.title}}</h2>
+					<div [innerHTML]="service.excerpt + '...'"></div>			
+					<div class="read-more"><a routerLink="{{service.url}}"><img src="/assets/images/icon-arrow.png" alt=""></a></div>
 				</div>
 			</div>
 
-			<div class="box box-white box-2">
-				<figure class="box-img"><img src="/assets/images/img-2.jpg" class="" alt=""></figure>
-				<div class="box-text">
-					<h2 class="box-title">Interior Painting</h2>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se...					
-					<div class="read-more"><a href=""><img src="/assets/images/icon-arrow.png" alt=""></a></div>
-				</div>
-			</div>
-
-			<div class="box box-3">
-				<h2 class="box-title-big">More Services</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
-				<ul>
-				<li>Ut wisi enim ad minim veniam</li>
-				<li>Quis nostrud exerci tation</li>
-				<li>Ullamcorper suscipit lobortis</li>
-				<li>Nisl ut aliquip ex ea commodo</li>
-				<li>Consequat duis autem vel eum</li>
-				</ul>
-				<div class="btn-call-action"><a href="">Contact Us Now!</a></div>
+			<div class="box box-3" *ngFor="let homeContent of homeContents | filter:'home-section-3' ">
+				<h2 class="box-title-big">{{homeContent.title}}</h2>
+				<div [innerHTML]="homeContent.content"></div>
+				<div class="btn-call-action"><a routerLink="{{homeContent.url}}">Contact Us Now!</a></div>
 			</div>
 			<div class="clear"></div>
 		</div>
