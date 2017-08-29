@@ -12,9 +12,17 @@ import { SiteService } from '../services/site.service';
 })
 export class AppGalleryComponent {
     sites: Sites[];
+    pages: Content[];
+    galleryContent: Gallery[];
     constructor(private headerService: SiteService) {
         this.headerService.getHeader().subscribe(sites => {
             this.sites = sites;
+        });
+        this.headerService.getPage('page-gallery').subscribe( page => {
+            this.pages = page;
+        });
+        this.headerService.getImageGallery().subscribe( gallery => {
+            this.galleryContent = gallery;
         });
     }
 }
@@ -29,4 +37,24 @@ interface Menus {
     id: number;
     url: string;
     title: string;
+}
+interface Content {
+    id: number;
+    title: string;
+    content: string;
+    parent: string;
+    url: string;
+    class: string;
+    featuredImage: string;
+    excerpt: string;
+}
+interface Gallery {
+    id: number;
+    title: string;
+    images: Images[];
+}
+interface Images {
+    id: number;
+    src: string;
+    alt: string;
 }
