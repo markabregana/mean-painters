@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 // get site json
 import { SiteService } from '../services/site.service';
@@ -7,14 +8,15 @@ import { SiteService } from '../services/site.service';
 @Component({
     moduleId: module.id,
     selector: 'app-main-template',
-    templateUrl: '../../assets/templates/app.services.html',
+    templateUrl: '../../assets/templates/app.single.service.html',
     providers: [SiteService]
 })
-export class AppServicesComponent {
+export class AppSingleServiceComponent {
     sites: Sites[];
     pages: Content[];
     services: Content[];
-    constructor(private headerService: SiteService) {
+    url: Service;
+    constructor(private headerService: SiteService, private route: ActivatedRoute) {
         this.headerService.getHeader().subscribe(sites => {
             this.sites = sites;
         });
@@ -23,6 +25,9 @@ export class AppServicesComponent {
         });
         this.headerService.getServices().subscribe( services => {
             this.services = services;
+        });
+        this.route.params.subscribe(params => {
+            this.url = params['url'];
         });
     }
 }
@@ -38,7 +43,6 @@ interface Menus {
     url: string;
     title: string;
 }
-
 interface Content {
     id: number;
     title: string;
@@ -48,4 +52,7 @@ interface Content {
     class: string;
     featuredImage: string;
     excerpt: string;
+}
+interface Service {
+    url: string;
 }

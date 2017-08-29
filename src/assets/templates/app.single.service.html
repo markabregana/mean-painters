@@ -1,17 +1,14 @@
 <section id="page-title">
-	<div class="wrap" *ngFor="let page of pages">{{page.title}}</div>
+	<div class="wrap" *ngFor="let service of services | filter:'url':url">{{service.title}}</div>
 </section>
 <main>
     <div class="wrap">
         <div class="archive-wrap">
             <div class="content-left">
-                <div class="archive-entry" *ngFor="let service of services">
-                    <figure><img src="{{service.featuredImage}}" class="" alt="" ></figure>
+                <div class="archive-entry" *ngFor="let service of services | filter: 'url':url">
                     <article>
-                        <h2 class="content-entry-title">
-                            <a routerLink="/{{service.parent}}/{{service.url}}">{{service.title}}</a>
-                        </h2>
-                        <div [innerHTML]="service.excerpt + '...'"></div>
+                        <figure><img src="{{service.featuredImage}}" class="" alt="" ></figure>
+                        <div [innerHTML]="service.content"></div>
                     </article>
                 </div>
             </div>

@@ -45,7 +45,9 @@ interface Content {
     id: number;
     title: string;
     content: string;
+    parent: string;
     url: string;
     class: string;
     featuredImage: string;
+    excerpt: string;
 }

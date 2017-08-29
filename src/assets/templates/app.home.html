@@ -41,11 +41,11 @@
 <main>
 	<div class="wrap">
 		<div class="home-content">
-			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:'home-section-1' ">
+			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:'location':'home-section-1' ">
 				<h2 class="content-title">{{homeContent.title}}</h2>
 				<div [innerHTML]="homeContent.content"></div>
 			</article>
-			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:'home-section-2' ">
+			<article class="{{homeContent.class}}" *ngFor="let homeContent of homeContents | filter:'location':'home-section-2' ">
 				<h2 class="content-title">{{homeContent.title}}</h2>
 				<div [innerHTML]="homeContent.content"></div>
 			</article>
@@ -62,11 +62,11 @@
 				<div class="box-text">
 					<h2 class="box-title">{{service.title}}</h2>
 					<div [innerHTML]="service.excerpt + '...'"></div>			
-					<div class="read-more"><a routerLink="{{service.url}}"><img src="/assets/images/icon-arrow.png" alt=""></a></div>
+					<div class="read-more"><a routerLink="{{service.parent}}/{{service.url}}"><img src="/assets/images/icon-arrow.png" alt=""></a></div>
 				</div>
 			</div>
 
-			<div class="box box-3" *ngFor="let homeContent of homeContents | filter:'home-section-3' ">
+			<div class="box box-3" *ngFor="let homeContent of homeContents | filter:'location':'home-section-3' ">
 				<h2 class="box-title-big">{{homeContent.title}}</h2>
 				<div [innerHTML]="homeContent.content"></div>
 				<div class="btn-call-action"><a routerLink="{{homeContent.url}}">Contact Us Now!</a></div>
