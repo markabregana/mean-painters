@@ -48,4 +48,5 @@ interface Content {
     url: string;
     class: string;
     featuredImage: string;
+    excerpt: string;
 }

@@ -12,9 +12,17 @@ import { SiteService } from '../services/site.service';
 })
 export class AppServicesComponent {
     sites: Sites[];
+    pages: Content[];
+    services: Content[];
     constructor(private headerService: SiteService) {
         this.headerService.getHeader().subscribe(sites => {
             this.sites = sites;
+        });
+        this.headerService.getPage('page-services').subscribe( page => {
+            this.pages = page;
+        });
+        this.headerService.getServices().subscribe( services => {
+            this.services = services;
         });
     }
 }
@@ -29,4 +37,14 @@ interface Menus {
     id: number;
     url: string;
     title: string;
+}
+
+interface Content {
+    id: number;
+    title: string;
+    content: string;
+    url: string;
+    class: string;
+    featuredImage: string;
+    excerpt: string;
 }

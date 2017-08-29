@@ -22,4 +22,9 @@ export class SiteService {
         return this.http.get('/assets/data/services.json')
             .map(res => res.json());
     }
+
+    getPage(page) {
+        return this.http.get('/assets/data/' + page + '.json')
+        .map(res => res.json());
+    }
 }

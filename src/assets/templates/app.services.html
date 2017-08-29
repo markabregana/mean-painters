@@ -1,22 +1,17 @@
 <section id="page-title">
-	<div class="wrap">Services</div>
+	<div class="wrap" *ngFor="let page of pages">{{page.title}}</div>
 </section>
 <main>
     <div class="wrap">
         <div class="archive-wrap">
             <div class="content-left">
-                <div class="archive-entry">
-                    <figure><img src="/assets/images/img-2.jpg" class="" alt="" ></figure>
+                <div class="archive-entry" *ngFor="let service of services">
+                    <figure><img src="{{service.featuredImage}}" class="" alt="" ></figure>
                     <article>
-                        <h2 class="content-entry-title"><a href="/services/interior-painting/">Interior Painting</a></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat […] </p>
-                    </article>
-                </div>
-                <div class="archive-entry">
-                    <figure><img src="/assets/images/img-1.jpg" class="" alt="" ></figure>
-                    <article>
-                        <h2 class="content-entry-title"><a href="/services/exterior-painting/">Exterior Painting</a></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat […] </p>
+                        <h2 class="content-entry-title">
+                            <a routerLink="{{service.url}}">{{service.title}}</a>
+                        </h2>
+                        <div [innerHTML]="service.excerpt + '...'"></div>
                     </article>
                 </div>
             </div>
@@ -25,8 +20,9 @@
                 <div class="archive-sidebar widget-archive">
                     <h2 class="widgettitle">Latest Services</h2>
                     <ul>
-                        <li><a href="/services/interior-painting/">Interior Painting</a></li>
-                        <li><a href="/services/exterior-painting/">Exterior Painting</a></li>
+                        <li *ngFor="let service of services">
+                            <a routerLink="{{service.url}}">{{service.title}}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
