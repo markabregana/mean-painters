@@ -1,11 +1,11 @@
 <section id="page-title">
-    <div class="wrap">Contact Us</div>
+    <div class="wrap" *ngFor="let page of pages">{{page.title}}</div>
 </section>
 <main>
     <div class="wrap">
         <div class="contact-wrap">
-            <div class="content-left">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+            <div class="content-left" *ngFor="let page of pages">
+                <div class="contact-us-text" [innerHTML]="page.content"></div>
             </div>
             <div class="content-right">
                 <div class="contact-form">

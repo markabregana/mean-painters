@@ -12,9 +12,13 @@ import { SiteService } from '../services/site.service';
 })
 export class AppContactUsComponent {
     sites: Sites[];
+    pages: Content[];
     constructor(private headerService: SiteService) {
         this.headerService.getHeader().subscribe(sites => {
             this.sites = sites;
+        });
+        this.headerService.getPage('page-contact-us').subscribe( page => {
+            this.pages = page;
         });
     }
 }
@@ -29,4 +33,14 @@ interface Menus {
     id: number;
     url: string;
     title: string;
+}
+interface Content {
+    id: number;
+    title: string;
+    content: string;
+    parent: string;
+    url: string;
+    class: string;
+    featuredImage: string;
+    excerpt: string;
 }
