@@ -11,7 +11,7 @@
 		<div class="mobile-menu">Menu</div>
 	    <nav id="nav-main-menu" class="menu-main-menu-container" *ngIf="site.menus">
 	        <ul id="main-menu" class="hide">
-	            <li *ngFor="let menu of site.menus" id="menu-item-{{menu.id}}" class="menu-item menu-item-{{menu.id}}"><a routerLink="{{menu.url}}">{{menu.title}}</a></li>
+	            <li *ngFor="let menu of site.menus" id="menu-item-{{menu.id}}" class="menu-item menu-item-{{menu.id}}" routerLinkActive="current_page_item"><a routerLink="{{menu.url}}">{{menu.title}}</a></li>
 	        </ul>
 	    </nav>
 
